@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <meta charset="utf-8">
+        <title>Coming Soon Page Design</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    </head>
+    <body>
+        
+            
+        <header>
+            <div class="gv-cart">
+                <h5 class="gv">Great v<span>isi</span>on</h5>
+          </div>
+            <div class="Soon">
+            <h2 class="first">Building Awesome Ecommerce Website</h2>
+            <p class="second">Welcome To Great Vision The Biggest Company In The world GVoE</p>
+            <P class="third">The Owner of GVoE Is Solomon Ezra </P>
+            <p class="fourth">When GVoE Published It will Give A Gift For each custumer</p>
+            <h1>COMING SOON</h1>
+            <hr>
+            <p id="launch"></p>
+            </div>
+        </header>
+    </body>
+    
+    
+    
+    <script>
+    
+        var countDownDate = new Date ("DECEMBER 5, 2023 00:00:00").getTime();
+
+        var x = setInterval(function() {
+
+        var now = new Date ().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor (distance /(1000*60*60*24));
+         var hours = Math.floor ((distance % (1000*60*60*24)) / (1000*60*60));
+          var minutes = Math.floor ((distance % (1000*60*60)) / (1000*60));
+           var seconds = Math.floor ((distance % (1000*60)) / 1000);
+
+document.getElementById("launch").innerHTML=days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById('launch').innerHTML="EXPIRED";
+    }
+            
+}, 1000);
+    
+    </script>
+</hmtl>
